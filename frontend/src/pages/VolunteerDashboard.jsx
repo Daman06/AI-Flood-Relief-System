@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function VolunteerDashboard() {
+  const navigate = useNavigate();
   const [requests, setRequests] = useState([]);
 
   const [stats, setStats] = useState({
@@ -44,9 +46,19 @@ function VolunteerDashboard() {
 
   const acceptMission = async (id) => {
     try {
-      await fetch(`https://ai-flood-relief-system.onrender.com/accept/${id}`, {
-        method: "PUT",
-      });
+      await fetch(
+  `https://ai-flood-relief-system.onrender.com/accept/${id}`,
+  {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      latitude: 0,
+      longitude: 0,
+    }),
+  }
+);
 
       fetchRequests();
       fetchStats();

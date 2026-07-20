@@ -97,7 +97,7 @@ useEffect(() => {
   }
   try {
     const response = await axios.post(
-      "https://ai-flood-relief-system.onrender.com",
+      "https://ai-flood-relief-system.onrender.com/rescue",
       {
         victim_name: victimName,
         phone_number: phoneNumber,
