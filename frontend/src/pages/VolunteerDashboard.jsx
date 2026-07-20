@@ -12,7 +12,7 @@ function VolunteerDashboard() {
 
   const fetchRequests = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/requests");
+      const res = await fetch("https://ai-flood-relief-system.onrender.com/requests");
       const data = await res.json();
       setRequests(data);
     } catch (err) {
@@ -22,7 +22,7 @@ function VolunteerDashboard() {
 
   const fetchStats = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:8000/dashboard-stats");
+      const res = await fetch("https://ai-flood-relief-system.onrender.com/dashboard-stats");
       const data = await res.json();
       setStats(data);
     } catch (err) {
@@ -44,7 +44,7 @@ function VolunteerDashboard() {
 
   const acceptMission = async (id) => {
     try {
-      await fetch(`http://127.0.0.1:8000/accept/${id}`, {
+      await fetch(`https://ai-flood-relief-system.onrender.com/accept/${id}`, {
         method: "PUT",
       });
 

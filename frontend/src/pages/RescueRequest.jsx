@@ -21,7 +21,7 @@ const getLocation = () => {
   const checkFloodAlert = async (lat, lon) => {
   try {
     const response = await axios.get(
-      `http://127.0.0.1:8000/flood-alert?latitude=${lat}&longitude=${lon}`
+      `https://ai-flood-relief-system.onrender.com/flood-alert?latitude=${lat}&longitude=${lon}`
     );
 
     setFloodAlert(response.data);
@@ -97,7 +97,7 @@ useEffect(() => {
   }
   try {
     const response = await axios.post(
-      "http://127.0.0.1:8000/rescue",
+      "https://ai-flood-relief-system.onrender.com",
       {
         victim_name: victimName,
         phone_number: phoneNumber,

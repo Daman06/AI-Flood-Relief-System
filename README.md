@@ -72,16 +72,6 @@ FloodRelief/
 └── README.md
 ```
 
----
-
-## ⚙️ Installation
-
-### Clone Repository
-
-```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-```
-
 ### Backend
 
 ```bash
@@ -100,7 +90,7 @@ uvicorn main:app --reload
 Backend runs on:
 
 ```
-http://127.0.0.1:8000
+https://ai-flood-relief-system.onrender.com
 ```
 
 ---
