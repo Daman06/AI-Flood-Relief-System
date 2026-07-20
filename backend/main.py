@@ -10,13 +10,14 @@ from bson import ObjectId
 from database.connection import rescue_requests_collection,volunteers_collection
 from fastapi import Body
 from agents.flood_alert_agent import flood_alert_agent
+from fastapi.middleware.cors import CORSMiddleware
 
    
 
 app = FastAPI(title="Flood Relief AI API")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins= ["https://ai-flood-relief-system.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
